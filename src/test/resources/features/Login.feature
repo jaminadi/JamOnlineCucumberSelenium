@@ -4,6 +4,7 @@ Feature: Login
 
   # Test Method = Test Case = Scenario
   # Test + DataProvider = Scenario Outline = Examples Table
+
   Scenario: Login as a sales manager and verify that title is Dashboard
     Given user is on the landing page
     When user logs in as a sales manager
