@@ -1,6 +1,6 @@
 Feature: Login
-  # Agile story
   As a user, I want to be able to login with username and password
+  # Agile story
 
   # Test Method = Test Case = Scenario
   # Test + DataProvider = Scenario Outline = Examples Table
