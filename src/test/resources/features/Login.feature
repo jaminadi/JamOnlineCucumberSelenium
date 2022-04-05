@@ -6,11 +6,17 @@ Feature: Login
   # Test + DataProvider = Scenario Outline = Examples Table
 
   Scenario: Login as a sales manager and verify that title is Dashboard
-    Given user is on the landing page
+    Given user is on the login page
     When user logs in as a sales manager
     Then user should verify that title is a Dashboard
 
   Scenario: Login as a store manager and verify that title is Dashboard
-    Given user is on the landing page
+    Given user is on the login page
     When user logs in as a store manager
     Then user should verify that title is a Dashboard
+
+    @driver
+    Scenario: Login as driver and verify that title is a Dashboard
+      Given user is on the login page
+      When user logs in as a driver
+      Then user should verify that title is a Dashboard
