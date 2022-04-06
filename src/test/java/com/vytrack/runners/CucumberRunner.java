@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         dryRun = false,
         strict = true,
-        tags = "@sales_manager or @driver"
+        tags = "@dashboard and @driver"
 )
 public class CucumberRunner {
 
