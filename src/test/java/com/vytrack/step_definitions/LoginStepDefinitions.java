@@ -41,7 +41,7 @@ public class LoginStepDefinitions {
         BrowserUtilities.wait(2);
 
         Assert.assertEquals("Dashboard", Driver.getDriver().getTitle());
-        Driver.closeDriver();
+
     }
 
     @When("user logs in as a driver")
