@@ -12,4 +12,22 @@ public class CreateCalendarEventStepDefinitions {
         calendarEventsPage.clickToCreateCalendarEvent();
     }
 
+    @Then("user enters {string} as title")
+    public void user_enters_as_title(String string) {
+        System.out.println("User enters title: " + string);
+        calendarEventsPage.enterCalendarEventTitle(string);
+    }
+
+    @Then("user enters {string} as a description")
+    public void user_enters_as_a_description(String string) {
+        System.out.println("User enters description: " + string);
+        calendarEventsPage.enterCalendarEventDescription(string);
+    }
+
+    @Then("user clicks on save and close button")
+    public void user_clicks_on_save_and_close_button() {
+        System.out.println("User clicks on save and close button");
+      calendarEventsPage.clickOnSaveAndClose();
+    }
+
 }
