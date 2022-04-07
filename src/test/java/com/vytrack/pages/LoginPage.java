@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage extends AbstractPageBase{
 
     @FindBy(id = "prependedInput") //we put annotation FindBy on top of instance var and specify locator type
     private WebElement username; //this is reference for username WebElement
@@ -26,14 +26,6 @@ public class LoginPage {
 
     @FindBy(css = "[class='alert alert-error']")
     private WebElement warningMessage;
-
-    public LoginPage() { //constructor
-        //to connect our WebDriver, page class and page factory
-        //PageFactory - used for using @FindBy annotations
-        //PageFactory - makes the process of finding elements much easier
-        //or LoginPage.class instead of this
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
 
     public String getWarningMessageText() {
         return warningMessage.getText();
