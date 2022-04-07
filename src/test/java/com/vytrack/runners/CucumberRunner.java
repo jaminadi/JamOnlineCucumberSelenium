@@ -12,7 +12,10 @@ import org.junit.runner.RunWith;
         dryRun = false,
         strict = false,
         tags = "@activities",
-        plugin = "html:target/cucumber-html-report"
+        plugin = {
+                "html:target/default-report",
+                "json:target/cucumber.json"
+        }
 )
 public class CucumberRunner {
 
