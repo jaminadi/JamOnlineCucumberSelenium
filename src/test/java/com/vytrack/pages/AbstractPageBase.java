@@ -32,7 +32,9 @@ public abstract class AbstractPageBase {
     }
 
     public void clickOnSaveAndClose() {
+        BrowserUtilities.wait(3);
         wait.until(ExpectedConditions.elementToBeClickable(saveAndClose)).click();
+        waitForLoaderMask();
     }
 
     public String getCurrentUserName() {
@@ -62,6 +64,11 @@ public abstract class AbstractPageBase {
         actions.moveToElement(tabElement).pause(2000).click(moduleElement).build().perform();
 
         BrowserUtilities.wait(4);
+        waitForLoaderMask();
+
+    }
+        public void waitForLoaderMask(){
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("[class*='loader-mask']")));
     }
 
 
