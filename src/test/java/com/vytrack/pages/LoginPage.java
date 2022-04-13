@@ -75,6 +75,6 @@ public class LoginPage extends AbstractPageBase{
             throw new RuntimeException(("Invalid role!"));
         }
         System.out.println("Login as: " + role);
-        login(userName, "UserUSer123");
+        login(userName, "UserUser123");
     }
 }
