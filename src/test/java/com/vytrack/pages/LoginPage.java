@@ -41,6 +41,7 @@ public class LoginPage extends AbstractPageBase{
     public void login(String usernameValue, String passwordValue) { //this method is overloaded
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
+        BrowserUtilities.waitForPageToLoad(10);
         BrowserUtilities.wait(3);
     }
 
@@ -52,6 +53,28 @@ public class LoginPage extends AbstractPageBase{
     public void login() {
         username.sendKeys(ConfigurationReader.getProperty("store_manager"));
         password.sendKeys(ConfigurationReader.getProperty("password"), Keys.ENTER);
+        BrowserUtilities.waitForPageToLoad(10);
         BrowserUtilities.wait(3);
+    }
+
+    /**
+     * this method stands for login based on user type
+     * For example: if param is equals to driver, user will login as a driver
+     * If role param is incorrect, method will throw exception
+     * @param role - driver, sales manager or store manager
+     */
+    public void login(String role){
+        String userName = "";
+        if (role.equalsIgnoreCase("driver")) {
+            userName = "user15";
+        }else if(role.equalsIgnoreCase("sales manager")){
+            userName = "salesmanager110";
+        }else if(role.equalsIgnoreCase("store manager")){
+            userName = "storemanager85";
+        }else{
+            throw new RuntimeException(("Invalid role!"));
+        }
+        System.out.println("Login as: " + role);
+        login(userName, "UserUSer123");
     }
 }
