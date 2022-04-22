@@ -32,13 +32,12 @@
                  <version>3.0.0-M4</version>
                  <configuration>
                      <!--for parallel running Cucumber-->
-                     <parallel>classes</parallel>
+                     <parallel>methods</parallel>
                      <threadCount>2</threadCount>
-                     <perCoreThreadCount>false</perCoreThreadCount>
-                     <forkCount>2C</forkCount>
+                     <useUnlimitedThreads>true</useUnlimitedThreads>
                      <includes>
                          <!--List all runner classes here-->
-                         <include>**/*Runner.java</include>
+                         <include>**/CucumberRunner*.java</include>
                      </includes>
                      <testFailureIgnore>true</testFailureIgnore>
                  </configuration>
