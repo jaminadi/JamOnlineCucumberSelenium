@@ -11,14 +11,13 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         dryRun = false,
         strict = false,
-    //    tags = "@driver",
+        tags = "@smoke_test",
         plugin = {
-                "html:target/default-report",
-                "json:target/cucumber1.json",
-                "rerun:target/rerun.txt"
+                "html:target/smoke_test_default-report",
+                "json:target/cucumber1.json"
         }
+
 )
-public class CucumberRunner {
 
-
+public class SmokeTestRunner {
 }
