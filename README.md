@@ -33,6 +33,10 @@ To run regression on qa1 and chrome browser:
 
 clean test -Dbrowser=chrome -Denv=qa1 -P Regression
 
+To run smoke test on qa2 and firefox:
+
+clean test -Dbrowser=firefox -Denv=qa2 -P Smoke
+
 Note: add mvn before every command if you are not running it on Jenkins:
 
 mvn test -Dbrowser=firefox -Denv=qa2 -P Regression
