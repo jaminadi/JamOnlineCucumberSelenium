@@ -56,7 +56,13 @@ public class Driver {
                     break;
                 case "chrome-remote":
                     try {
+                        //we create object of URL and specify
+                        //selenium grid hub as param
+                        //make sure it ends with /wd/hub
                         URL url = new URL("http://youripaddresshere:4444/wd/hub");
+                        //desiredCapabilities is used to specify what kind of node
+                        //is required for testing
+                        //such as: OS type, browser, version, etc..
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName(BrowserType.CHROME);
                         desiredCapabilities.setPlatform(Platform.ANY);
